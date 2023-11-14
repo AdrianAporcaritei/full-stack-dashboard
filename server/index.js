@@ -9,8 +9,6 @@ import clientRoutes from "./routes/client.js";
 import generalRoutes from "./routes/general.js";
 import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
-import { register } from "./controllers/auth.js";
-import authRoutes from "./routes/auth.js"
 
 // data imports
 import User from "./models/User.js";
@@ -39,12 +37,10 @@ app.use(cors());
 
 /*Routes*/
 
-app.post("/auth/register", register)
 app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
-app.use("/auth", authRoutes);
 
 /*MONGOOSSE SETUP */
 
